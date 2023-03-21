@@ -6,7 +6,7 @@ export function Filter({ isFilter }) {
   const dispatch = useDispatch();
   const changeInput = e => {
     const wordFilter = e.currentTarget.value.trim();
-    dispatch(addFilter(wordFilter));
+    dispatch(addFilter(wordFilter.toLowerCase()));
   };
   return (
     <div className={css.filter}>
